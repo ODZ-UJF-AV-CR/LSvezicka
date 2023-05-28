@@ -4,7 +4,7 @@ import serial
 import logging
 from logging.handlers import TimedRotatingFileHandler
 
-port = '/dev/ttyUSB1'
+port = '/dev/ttyUSB0'
 
 baud = 9600
 
@@ -24,7 +24,7 @@ print(port, logname)
 while True:
 	reading = ser.readline()
 	if (len(reading) > 0):
-		data = str(int(round(time.time(),2))) + ',' + str(reading,'utf-8')
+		data = str(round(time.time(),2)) + ',' + str(reading,'utf-8')
 		print(data)
 		logger.info(data)
 
