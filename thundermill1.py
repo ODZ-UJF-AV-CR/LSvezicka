@@ -4,7 +4,7 @@ import serial
 import logging
 from logging.handlers import TimedRotatingFileHandler
 
-port = '/dev/ttyUSB1'
+port = '/dev/ttyUSB0'
 
 baud = 9600
 
@@ -13,7 +13,7 @@ ser = serial.Serial(port, baud, timeout=1)
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-logname = "/home/ubuntu/data/vezicka/efm_down/efm_down.csv"
+logname = "/home/ubuntu/data/vezicka/thundermill1/thundermill1.csv"
 handler = TimedRotatingFileHandler(logname, when='h', interval=1, utc=True)
 #handler.setLevel(logging.INFO)
 #handler.suffix = "%Y%m%d%H%M"

@@ -4,7 +4,7 @@ import serial
 import logging
 from logging.handlers import TimedRotatingFileHandler
 
-port = '/dev/ttyUSB1'
+port = '/dev/ttyUSB2'
 
 baud = 9600
 

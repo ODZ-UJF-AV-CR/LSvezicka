@@ -8,5 +8,5 @@ do
     ffmpeg -i http:/10.10.11.130:81/stream -frames 36000 -c mjpeg ~/data/vezicka/camera/$NOW.mjpeg
     # delete files 5 days old
     #!!!find ~/data/vezicka/camera -mtime +5 -type f -delete
-    #sleep 1
+    sleep 1
 done
